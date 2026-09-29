@@ -1,0 +1,70 @@
+{
+  "package": "obix-core-streams",
+  "dir": "core/obix-core-streams",
+  "importedBy": "scripts/recovery/import-packages.mjs",
+  "snapshot": "snap-20260924T142414Z",
+  "stage": "stage-2 lift-and-shift (base owner; later stages repair/merge)",
+  "sources": [
+    {
+      "label": "upstream:obix-core-streams@a3e9779",
+      "repo": "obix-core-streams",
+      "url": "https://github.com/obinexusmk2/obix-core-streams",
+      "sha": "a3e97798280bedc356ce95572f8503f969a2ab7a",
+      "path": ".",
+      "license": "MIT",
+      "licenseFileUpstream": true,
+      "filesImported": 6,
+      "filesExcluded": 11
+    }
+  ],
+  "originalManifest": {
+    "name": "@obinexusltd/obix-core-streams",
+    "version": "0.1.0",
+    "license": "MIT",
+    "bin": null,
+    "scripts": {
+      "build": "tsc -p tsconfig.json",
+      "test": "node --test \"test/*.test.mjs\"",
+      "prepublishOnly": "npm run build"
+    }
+  },
+  "transforms": [
+    "package.json regenerated (lockstep version, exact internal pins, exports with \"types\" first, standard scripts)",
+    "tsconfig.json generated (NodeNext via tsconfig.base.json; @types/node enabled)",
+    "internal specifiers renamed: none",
+    "relative imports given \".js\"/\"/index.js\" extensions: 0"
+  ],
+  "localFixes": [],
+  "scopeScrub": {
+    "rule": "scripts/recovery/scrub-rules.mjs (brief: no other OBINexus projects)",
+    "replacementsPerFile": {}
+  },
+  "authoredOverlay": [],
+  "excluded": [
+    "dist/**",
+    "node_modules/**",
+    "lockfiles",
+    "tsconfig*.json (regenerated)",
+    ".gitignore",
+    ".github/**",
+    "coverage/**"
+  ],
+  "unresolvedRelativeImports": [],
+  "note": null,
+  "renamedFrom": [
+    {
+      "name": "@obinexusltd/obix-core-streams",
+      "dir": "core/obix-core-streams",
+      "stage": "unscoped-naming",
+      "why": "D-102 (2026-09-29): OBIX packages are named without an npm scope — previous name @obinexusltd/obix-core-streams, current name obix-core-streams (docs/recovery/unscoped-migration.md); the directory, version and exports are unchanged"
+    }
+  ],
+  "export": {
+    "from": "https://github.com/obinexusmk2/obix-monorepo",
+    "branch": "recovery/obix-api-preserving-rebuild",
+    "commit": "69cafc94910c1add865a520877617ac307668875",
+    "directory": "core/obix-core-streams",
+    "exportedBy": "scripts/release/export-repos.mjs",
+    "note": "a clean initial commit of this package; the monorepo history is not imported (D-103). Local machine paths in this record are replaced by <local workspace>."
+  }
+}
